@@ -38,11 +38,18 @@ Once we have a working binary, we can use Docker to package it.
 ```bash
 cat Dockerfile
 docker build -t askcarter/monolith:1.0.0 .
+```
 
+After building the image, use Docker to verfiy that it still functions the same.
+```bash
 docker run -d askcarter/monolith:1.0.0
 docker ps
 docker inspect <container-id>
 curl http://<docker-ip>
+```
+
+After verifying everything works as expected, clean up your environment.
+```bash
 docker stop <container-id>
 docker rm <container-id>
 docker rmi askcarter/monolith:1.0.0
