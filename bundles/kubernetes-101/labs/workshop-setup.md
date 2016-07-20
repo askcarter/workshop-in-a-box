@@ -23,7 +23,9 @@ gcloud container clusters create myk8scluster --num-nodes 7
 
 In your Cloud Shell environment clone the following repository.
 
-```
+```bash
+mkdir -p ~/go/src/github.com/askcarter
+cd ~/go/src/github.com/askcarter
 git clone https://github.com/askcarter/workshop-in-a-box.git
-cd workshop-in-a-box/kubernetes101/kubernetes
+cd workshop-in-a-box/kubernetes-101
 ```
