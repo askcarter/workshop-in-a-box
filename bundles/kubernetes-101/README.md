@@ -9,14 +9,13 @@ Kubernetes Version: v1.2.2
 
 All of the code for this workshop was written by Kelsey Hightower.
 
-
 ## Formats
 
 ### Course with Codelab
 
 | Resource  | duration | description | 
 | --- | --- | --- |
-| Kubernetes 101 | 5m | Course intro video. |
+| [Intro video](https://www.youtube.com/watch?v=T59RtLov9E0) | 5m | Course intro video. |
 | [Scalable Microservices with Kubernetes](https://www.udacity.com/course/scalable-microservices-with-kubernetes--ud615) | 180m | This is a detailed introductory Kubernetes course with industry experts like Kelsey Hightower, Adrian Cockcroft, and Carter Morgan. Just play the videos and follow along. |
 
 ### Kubernetes 101 Talk with Codelab, and Slides with speaker notes
