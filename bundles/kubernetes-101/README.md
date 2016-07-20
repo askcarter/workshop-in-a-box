@@ -5,7 +5,7 @@ In this workshop you will learn how to:
 * Provision Kubernetes using [Google Container Engine](https://cloud.google.com/container-engine)
 * Deploy and manage Docker containers using kubectl
 
-Kubernetes Version: 1.2.2
+Kubernetes Version: v1.2.2
 
 All of the code for this workshop was written by Kelsey Hightower.
 
