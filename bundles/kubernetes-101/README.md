@@ -7,6 +7,8 @@ In this workshop you will learn how to:
 
 Kubernetes Version: 1.2.2
 
+All of the code for this workshop was written by Kelsey Hightower.
+
 ## Workshop setup
 
 #### Google Cloud Platform account setup
