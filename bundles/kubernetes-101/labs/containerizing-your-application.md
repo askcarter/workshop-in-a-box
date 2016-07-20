@@ -6,12 +6,12 @@ In this lab you will build your application, run it locally, and then package it
 
 The first hurdle to is the application itself.  How do you write it?  How do you deploy it?
 
-First set up the code and the Go build environment. For this lab we'll be using an example app from GitHub: [kelseyhightower/app](https://github.com/kelseyhightower/app).
+First set up the code and the Go build environment. For this lab we'll be using the example app, called App, pacakged with the workshop.
 ```bash
 export GOPATH=~/go
-mkdir -p $GOPATH/src/github.com/kelseyhightower
-cd ~/go/src/github.com/kelseyhightower
-git clone https://github.com/kelseyhightower/app
+mkdir -p $GOPATH/src/github.com/askcarter
+cd ~/go/src/github.com/askcarter
+git clone https://github.com/askcarter/app
 ```
 
 ## Build the app
@@ -32,6 +32,7 @@ curl -H "Authorization: Bearer $TOKEN" http://127.0.0.1:10180/secure
 
 Once we have a binary, we can use Docker to package and distribute it.
 ```bash
+cat Dockerfile
 docker build -t askcarter/monolith:1.0.0 .
 # Optionally push to Docker Hub using docker push <your_repo>/monolith:1.0.0
 docker run -d askcarter/monolith:1.0.0
@@ -41,19 +42,4 @@ curl http://<docker-ip>
 docker stop <container-id>
 docker rm <container-id>
 docker rmi askcarter/monolith:1.0.0
-```
-
-## Title here
-
-The next hurdle is the infrastructure needed to run manage in production. We'll use Kubernetes (and GKE) to handle that for us.
-
-```bash
-cd ~/kubernetes-workshop/kubernetes
-kubectl run monolith --image askcarter/monolith:1.0.0
-kubectl expose deployment monolith --port 80 --type LoadBalancer
-kubectl scale deployment monolith --replicas 3
-kubectl get service monolith
-curl http://<External-IP>
-kubectl delete services monolith
-kubectl delete deployment monolith
 ```
