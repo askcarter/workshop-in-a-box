@@ -16,11 +16,15 @@ git clone https://github.com/askcarter/app
 
 ## Build the app
 
-Now let's build the app as a static binary and test its functionality.
+Build the app as a static binary.
 ```bash
 cd app/monolith
 # main.go contains our app entry point
 go build -tags netgo -ldflags "-extldflags '-lm -lstdc++ -static'" .
+```
+
+Test the app's functionality.
+```bash
 ./monolith --http :10180 --health :10181 &
 curl http://127.0.0.1:10180
 curl http://127.0.0.1:10180/secure
@@ -30,11 +34,11 @@ echo $TOKEN
 curl -H "Authorization: Bearer $TOKEN" http://127.0.0.1:10180/secure
 ```
 
-Once we have a binary, we can use Docker to package and distribute it.
+Once we have a working binary, we can use Docker to package it. 
 ```bash
 cat Dockerfile
 docker build -t askcarter/monolith:1.0.0 .
-# Optionally push to Docker Hub using docker push <your_repo>/monolith:1.0.0
+
 docker run -d askcarter/monolith:1.0.0
 docker ps
 docker inspect <container-id>
@@ -43,3 +47,5 @@ docker stop <container-id>
 docker rm <container-id>
 docker rmi askcarter/monolith:1.0.0
 ```
+
+You can optionally push the image to the Docker Hub using `docker push <your_repo>/monolith:1.0.0`
