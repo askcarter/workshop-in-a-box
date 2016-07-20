@@ -1,4 +1,4 @@
-# Kubernetes workshop
+# Kubernetes 101 Content Bundle
 
 In this workshop you will learn how to:
 
