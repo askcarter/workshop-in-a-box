@@ -48,7 +48,7 @@ Kubernetes is all about applications and in this section you will utilize the Ku
 
 ## Lab Docker images
 
-App is an example 12 Facter application. During this workshop you will be working with the following Docker images:
+App is an example 12 Factor application. During this workshop you will be working with the following Docker images:
 
 * [askcarter/monolith](https://hub.docker.com/r/askcarter/monolith) - Monolith includes auth and hello services.
 * [askcarter/auth](https://hub.docker.com/r/askcarter/auth) - Auth microservice. Generates JWT tokens for authenticated users.
