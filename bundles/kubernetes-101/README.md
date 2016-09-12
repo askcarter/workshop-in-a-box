@@ -7,7 +7,7 @@ In this workshop you will learn how to:
 
 Kubernetes Version: v1.2.2
 
-All of the code for this workshop was written by Kelsey Hightower.
+All of the code for this workshop was written by [Kelsey Hightower](https://twitter.com/kelseyhightower).
 
 ## Formats
 
