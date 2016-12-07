@@ -35,16 +35,16 @@ kubectl describe secrets tls-certs
 
 The nginx container also needs a configuration file to setup the secure reverse proxy. In this tutorial you will create a configmap from the `frontend.conf` nginx configuration file.
 
-Create the `nginx-frontend-conf` configmap based on the `frontend.conf` nginx configuration file:
+Create the `nginx-proxy-conf` configmap based on the `frontend.conf` nginx configuration file:
 
 ```
-kubectl create configmap nginx-frontend-conf --from-file=nginx/frontend.conf
+kubectl create configmap nginx-proxy-conf --from-file=nginx/frontend.conf
 ```
 
 Examine the `nginx-proxy-conf` configmap:
 
 ```
-kubectl describe configmaps nginx-frontend-conf
+kubectl describe configmaps nginx-proxy-conf
 ```
 
 ### Quiz
